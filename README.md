@@ -7,13 +7,14 @@
 - C#
     - [Neural Network Activation Functions and Derivatives](csharp/NN.Activations.cs)
     - [Cholesky Factorization (no checks)](csharp/Matrix_Cholesky.cs)
-$$T = \left[{\begin{array}{llll}
+```math
+T = \left[{\begin{array}{llll}
 \sqrt{A_{11}} & A_{ij}/T_{11}  & A_{ij}/T_{11} & ... \\
 0 & \sqrt{A_{ii}-\sum\limits_{k=1}^{i}T_{ki}^2} & (A_{ij}-\sum\limits_{j=i+1}^{n}\sum\limits_{k=1}^{i}T_{ki}T_{kj})/T_{ii} & ...\\
 0 & 0 & \sqrt{A_{ii}-\sum\limits_{k=1}^{i}T_{ki}^2} & ... \\
 0 & 0 & 0 & ... \\
-
-\end{array} } \right]$$
+\end{array} } \right]
+```
 
 - HLSL
     - [2x2 Moore Penrose With Reduced Ill Conditioning](hlsl/MoorePenroseInverse2x2.hlsl)
