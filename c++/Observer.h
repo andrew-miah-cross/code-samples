@@ -1,11 +1,3 @@
-//
-//  Observer.hpp
-//  Glyph
-//
-//  Created by Andrew Miah Cross on 01/11/2012.
-//  Copyright (c) 2012 Andrew Miah Cross. All rights reserved.
-//
-
 #ifndef Glyph_Observer_hpp
 #define Glyph_Observer_hpp
 
