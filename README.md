@@ -1,7 +1,7 @@
 # Code Samples
 
 - C++
-    - [QR Decomposition (Gramm Schmidt and Linear Solver)](c++/Matrix.Decompositions.QR.GramSchmidt.cpp)
+    - [QR Decomposition (Gramm Schmidt)](c++/Matrix.Decompositions.QR.GramSchmidt.cpp)
     - [In-place and Optimal Elementary Permutation AXPY](c++/Matrix.Elementary.Axpy.cpp) 
     - [Observer Pattern](c++/Observer.h)
 - C#
