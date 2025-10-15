@@ -1,4 +1,4 @@
--- Andrew M. Cross (andrew.miah.cross@gmail.com)
+-- 2010. Andrew M. Cross (andrew.miah.cross@gmail.com)
 
 DROP DATABASE mobile_content_store_db;
 CREATE DATABASE mobile_content_store_db;
