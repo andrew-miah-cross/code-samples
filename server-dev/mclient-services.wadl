@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 2010. Andrew M. Cross (andrew.miah.cross@gmail.com) -->
+<application xmlns="http://research.sun.com/wadl/2006/10">
+  <doc xmlns:jersey="http://jersey.dev.java.net/" jersey:generatedBy="Jersey: 1.4 09/11/2010 10:30 PM"/>
+  <resources base="http://www.tricastmedia.com/app-store/mclient-services">
+    <resource path="mclient">
+      <resource path="login">
+        <method name="GET" id="login">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="emailAddress"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="password"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="categories/list">
+        <method name="GET" id="listCategories">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="header" name="Accept-Language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="themes/list">
+        <method name="GET" id="listThemes">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="header" name="Accept-Language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="bitmap/select">
+        <method name="GET" id="listBitmapResources">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="header" name="Accept-Language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="prefixRef"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="text/select">
+        <method name="GET" id="listTextResources">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="header" name="Accept-Language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="prefixRef"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="binary/get">
+        <method name="GET" id="getBinaryResource">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="header" name="Accept-Language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="ref"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="products/list-by-{type:name|date|rating|location|promotionRank|keywordSearch|popularityThisWeek|popularityThisYear|popularityThisMonth|popularityEver}">
+        <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="template" name="type"/>
+        <method name="GET" id="listContent">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="header" name="Accept-Language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="GBP" type="xs:string" style="query" name="currency"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="ascending"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="default" type="xs:string" style="query" name="categoryRef"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="promotion"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:boolean" style="query" name="freeOnly"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:float" style="query" name="lat"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:float" style="query" name="lon"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="query" name="rank"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="keywords"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="-1" type="xs:int" style="query" name="startRow"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="-1" type="xs:int" style="query" name="numRows"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="products/list-suggested">
+        <method name="GET" id="listSuggested">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="default" type="xs:string" style="query" name="category"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="header" name="Accept-Language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="-1" type="xs:int" style="query" name="startRow"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="-1" type="xs:int" style="query" name="numRows"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="shelf/list-by-{type:name|date|rating|price}">
+        <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="template" name="type"/>
+        <method name="GET" id="listPurchasedProducts">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="header" name="Accept-Language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="ascending"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="-1" type="xs:int" style="query" name="startRow"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="-1" type="xs:int" style="query" name="numRows"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="product/profile">
+        <method name="GET" id="getProductProfile">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="header" name="Accept-Language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:long" style="query" name="productVariantId"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="product/feedback/list-by-{type}">
+        <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="template" name="type"/>
+        <method name="GET" id="getProductFeedback">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="header" name="Accept-Language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:long" style="query" name="productVariantId"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="allLanguages"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="ascending"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="0" type="xs:int" style="query" name="startRow"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="5" type="xs:int" style="query" name="numRows"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="product/feedback/send">
+        <method name="GET" id="sendFeedback">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:long" style="query" name="productVariantId"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="text"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="query" name="rating"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="bug"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="product/purchase">
+        <method name="GET" id="purchase">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:long" style="query" name="productVariantId"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="currency"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="web" type="xs:string" style="query" name="deliveryMethod"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="product/download">
+        <method name="GET" id="download">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:long" style="query" name="productVariantId"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="web" type="xs:string" style="query" name="deliveryMethod"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="install-notify">
+        <method name="GET" id="installNotification">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="hash"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="batch-install-notify">
+        <method name="GET" id="batchInstallNotification">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="productVersionIds"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="recommend-via-email">
+        <method name="GET" id="recommendViaEmail">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="header" name="Accept-Language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:long" style="query" name="productVariantId"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="emailAddress"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="name"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="categories/content/list">
+        <method name="GET" id="listCategoriesWithContent">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="header" name="Accept-Language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="" type="xs:string" style="query" name="rootCategoryRef"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="login/shelf/list-by-{type:name|date|rating|price}">
+        <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="template" name="type"/>
+        <method name="GET" id="compoundLoginListShelf">
+          <request>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="json"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="emailAddress"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="password"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="header" name="Accept-Language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="language"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" style="query" name="country"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="false" type="xs:boolean" style="query" name="ascending"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="-1" type="xs:int" style="query" name="startRow"/>
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="-1" type="xs:int" style="query" name="numRows"/>
+          </request>
+          <response>
+            <representation mediaType="*/*"/>
+          </response>
+        </method>
+      </resource>
+    </resource>
+  </resources>
+</application>

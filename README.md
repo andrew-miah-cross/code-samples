@@ -1,9 +1,17 @@
 # Code Samples
 
+- Typescript
+    - [Retry with Decorator and Unit Tests](typescript/Retry.ts)
+- SQL
+    - [Mobile Content Store SQL Schema](sql/mobile_content_store_db.sql)    
+- WADL
+    - [Mobile Content Store Client WADL](server-dev/mclient-services.wadl)
 - C++
     - [QR Decomposition (Gramm Schmidt)](c++/Matrix.Decompositions.QR.GramSchmidt.cpp)
     - [In-place and Optimal Elementary Permutation AXPY](c++/Matrix.Elementary.Axpy.cpp) 
     - [Observer Pattern](c++/Observer.h)
+- HLSL
+    - [2x2 Moore Penrose With Reduced Ill Conditioning](hlsl/MoorePenroseInverse2x2.hlsl)
 - C#
     - [Neural Network Activation Functions and Derivatives](csharp/NN.Activations.cs)
     - [Cholesky Factorization (no checks)](csharp/Matrix_Cholesky.cs)
@@ -15,13 +23,6 @@ T = \left[{\begin{array}{llll}
 0 & 0 & 0 & ... \\
 \end{array} } \right]
 ```
-
-- HLSL
-    - [2x2 Moore Penrose With Reduced Ill Conditioning](hlsl/MoorePenroseInverse2x2.hlsl)
-- Typescript
-    - [Retry with Decorator and Unit Tests](typescript/Retry.ts)
-- SQL
-    - [Mobile Content Store SQL Schema](sql/mobile_content_store_db.sql)
 - MatLAB
     - [Figure Exported from Newton Raphson Classifier](matlab/NewtonRaphson%20-%20Logistic%20Regression.fig)
 
