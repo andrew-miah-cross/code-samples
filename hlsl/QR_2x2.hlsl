@@ -1,6 +1,6 @@
 // Andrew M. Cross (andrew.miah.cross@gmail.com)
 
-void MoorePenrose_2x2(in float2x2 A, out float2x2 Q, out float2x2 R)
+void QR_2x2(in float2x2 A, out float2x2 Q, out float2x2 R)
 {
     const float tolerance = pow(10, -FLT_DIG);
     R = A;

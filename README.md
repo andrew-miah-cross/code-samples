@@ -11,7 +11,7 @@
     - [In-place and Optimal Elementary Permutation AXPY](c++/Matrix.Elementary.Axpy.cpp) 
     - [Observer Pattern](c++/Observer.h)
 - HLSL
-    - [2x2 Moore Penrose With Reduced Ill Conditioning](hlsl/MoorePenroseInverse2x2.hlsl)
+    - [2x2 QR With Reduced Ill Conditioning](hlsl/QR_2x2.hlsl)
 - C#
     - [Neural Network Activation Functions and Derivatives](csharp/NN.Activations.cs)
     - [Cholesky Factorization (no checks)](csharp/Matrix_Cholesky.cs)
